@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://ctd.ai/integrations-api + https://ctd.ai/integrations-mcp + OAuth well-known metadata
+docs: https://ctd.ai/integrations-api
+schemes:
+- id: apiKey
+  type: apiKey
+  in: header
+  header_names:
+  - ctd-api-key
+  - ctd-client-id
+  description: >-
+    REST API authentication. Two headers on every request: ctd-api-key (your API
+    key, obtained from https://app.ctd.ai/) and ctd-client-id (your account email).
+    No OAuth flow and no SDK required.
+  applies_to: CTD Paths REST API (https://api.ctd.ai/user/atc-paths-api/public/v1/)
+- id: oauth2
+  type: oauth2
+  flow: authorization_code
+  pkce: S256
+  dynamic_client_registration: true
+  authorization_server: https://app.ctd.ai/users-api
+  authorization_endpoint: https://app.ctd.ai/oauth/authorize
+  token_endpoint: https://app.ctd.ai/users-api/v2/oauth/token
+  scopes:
+  - read
+  - write
+  description: >-
+    MCP server authentication. OAuth 2.0 authorization-code with PKCE (S256) and
+    RFC 7591 dynamic client registration; the client obtains a bearer token via the
+    user's browser approval. No manual API keys.
+  applies_to: CTD MCP server (https://app.ctd.ai/mcp)
+- id: sso
+  type: enterprise
+  description: SSO and SCIM provisioning available on the Business tier.
+  applies_to: App / organization access
+  source: https://ctd.ai/security
