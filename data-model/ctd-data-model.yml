@@ -1,0 +1,56 @@
+generated: '2026-07-18'
+method: derived
+source: https://ctd.ai/integrations-api + https://ctd.ai/llms.txt
+note: >-
+  Entity-relationship graph derived from the documented REST/MCP operation surface and
+  product concepts. CTD publishes no OpenAPI, so field-level shapes are not asserted.
+entities:
+- name: Person
+  description: A contact in the relationship graph, scored from two-way email and LinkedIn activity.
+- name: Company
+  description: An organization; people are reachable at companies via employment.
+- name: Path
+  description: A ranked warm-introduction path from you to a target person or company, routed through connectors; carries a stage.
+- name: Connector
+  description: A network member whose relationship provides a hop on a path; can approve or decline an intro.
+- name: GhostEmail
+  description: An introduction email drafted on behalf of the best-connected person, who reviews and sends it.
+- name: List
+  description: A saved target list of people and/or companies.
+- name: JobChange
+  description: A detected employer change for a person in your network.
+- name: ExternalMember
+  description: An advisor, investor, board member, or portfolio founder invited so their first-degree network joins yours.
+relationships:
+- from: Person
+  to: Company
+  type: belongs_to
+  via: employer
+- from: Path
+  to: Person
+  type: has_one
+  via: target
+- from: Path
+  to: Company
+  type: has_one
+  via: target
+- from: Path
+  to: Connector
+  type: has_many
+  via: hops
+- from: GhostEmail
+  to: Connector
+  type: belongs_to
+  via: sender
+- from: GhostEmail
+  to: Path
+  type: belongs_to
+  via: path
+- from: JobChange
+  to: Person
+  type: belongs_to
+  via: person
+- from: List
+  to: Person
+  type: has_many
+  via: members

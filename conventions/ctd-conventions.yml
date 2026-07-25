@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://ctd.ai/integrations-api + https://ctd.ai/pricing + OAuth well-known metadata
+auth:
+  rest: Two headers — ctd-api-key + ctd-client-id (apiKey). No OAuth, no SDK.
+  mcp: OAuth 2.0 authorization_code + PKCE (S256), dynamic client registration.
+  cross_link: authentication/ctd-authentication.yml
+versioning:
+  style: uri-path
+  current: v1
+  example: https://api.ctd.ai/user/atc-paths-api/public/v1/
+  cross_link: lifecycle/ctd-lifecycle.yml
+rate_limiting:
+  policy: >-
+    Standard rate limits only; unlimited usage on paid plans with no credits to buy
+    and no per-call pricing. Professional = basic API/MCP; Team/Business = full
+    (everything exposed).
+  signaling: not publicly documented
+pagination:
+  present: true
+  detail: >-
+    List operations exist (reachable people/companies, ghost emails, activity feed,
+    recent job changes) but pagination parameters/response fields are not published.
+idempotency: not documented
+field_expansion: not documented
+metadata: not documented
+request_id_tracing: not documented
+error_envelope:
+  detail: not publicly documented (no OpenAPI or error reference published)
+  cross_link: null
+sdk: none — the REST API is designed for direct HTTP use with no SDK.

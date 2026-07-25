@@ -1,0 +1,1 @@
+{"resource":"https://app.ctd.ai/mcp","authorization_servers":["https://app.ctd.ai/users-api"],"bearer_methods_supported":["header"],"scopes_supported":["read","write"]}

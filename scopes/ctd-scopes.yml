@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://app.ctd.ai/.well-known/oauth-authorization-server + https://ctd.ai/integrations-mcp
+docs: https://ctd.ai/integrations-mcp
+oauth: true
+authorization_server: https://app.ctd.ai/users-api
+flows:
+- authorization_code
+pkce: S256
+scopes:
+- name: read
+  description: >-
+    Read access to your relationship graph — look up people and companies, resolve
+    warm paths to a target, natural-language path search, list ghost emails and the
+    activity feed, and see recent job changes across your network.
+- name: write
+  description: >-
+    Write access — create and send ghost emails, update path stages, run approver
+    actions (share/decline), and add or remove path participants.
+notes: >-
+  read and write are the only scopes advertised by the OAuth authorization-server
+  metadata (scopes_supported). Scope descriptions are mapped from the documented
+  REST/MCP operation surface (GET operations = read; POST/PATCH operations = write).

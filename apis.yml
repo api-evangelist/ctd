@@ -1,27 +1,127 @@
 aid: ctd
-name: Ctd
-description: 'Ctd is a company surfaced as a portfolio company of norwest-venture-partners and added to
-  the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+name: Connect The Dots
+description: >-
+  Connect The Dots (CTD) is a relationship intelligence platform that scores every
+  relationship across a team's network — from real two-way email and LinkedIn activity —
+  to surface the warmest introduction path to any person or company. It merges everyone's
+  contacts into one deduplicated "Supergraph," routes intros through the best-connected
+  colleague (including "ghost emails" sent on their behalf), tracks job changes, and
+  activates the network for sales, recruiting, and VC/PE deal sourcing. Everything in the
+  app is exposed through a simple two-header REST API and a hosted MCP server for AI clients
+  like Claude and Cursor. Backed by Norwest Venture Partners.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://ctd.ai/assets/images/og-default.png
 url: https://raw.githubusercontent.com/api-evangelist/ctd/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: real-api-provider
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-- Unknown
-apis: []
+- Relationship Intelligence
+- Sales
+- Warm Introductions
+- Network Graph
+- CRM
+- MCP
+- Venture Capital
+apis:
+- name: CTD Paths API
+  description: >-
+    Simple REST API exposing the full Connect The Dots relationship graph — reachable
+    people and companies, warm paths to a target (including natural-language and
+    stage-filtered path search), recent job changes, and ghost-email creation and
+    activity. Authenticated with two headers (ctd-api-key + ctd-client-id); no SDK.
+  humanURL: https://ctd.ai/integrations-api
+  baseURL: https://api.ctd.ai/user/atc-paths-api/public/v1/
+  tags:
+  - Relationship Intelligence
+  - Warm Introductions
+  properties:
+  - type: Documentation
+    url: https://ctd.ai/integrations-api
+  - type: Authentication
+    url: authentication/ctd-authentication.yml
+  - type: OAuthScopes
+    url: scopes/ctd-scopes.yml
+  - type: Conventions
+    url: conventions/ctd-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/ctd-lifecycle.yml
+  - type: DataModel
+    url: data-model/ctd-data-model.yml
+  - type: Conformance
+    url: conformance/ctd-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: MCPServer
+  url: mcp/ctd-mcp.yml
+- type: LLMsTxt
+  url: llms/ctd-llms.txt
+- type: WellKnown
+  url: well-known/ctd-well-known.yml
+- type: Authentication
+  url: authentication/ctd-authentication.yml
+- type: OAuthScopes
+  url: scopes/ctd-scopes.yml
+- type: Conventions
+  url: conventions/ctd-conventions.yml
+- type: Conformance
+  url: conformance/ctd-conformance.yml
+- type: Compliance
+  url: security/ctd-trust-center.yml
+- type: Lifecycle
+  url: lifecycle/ctd-lifecycle.yml
+- type: DataModel
+  url: data-model/ctd-data-model.yml
+- type: TrustCenter
+  url: security/ctd-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/ctd-vulnerability-disclosure.yml
+- type: Security
+  url: security/ctd-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/ctd-domain-security.yml
+- type: APIReference
+  url: https://ctd.ai/integrations-api
+- type: Documentation
+  url: https://ctd.ai/integrations-api
+- type: Pricing
+  url: https://ctd.ai/pricing
+- type: Blog
+  url: https://ctd.ai/blog
+- type: Support
+  url: https://ctd.ai/faqs
+- type: SignUp
+  url: https://app.ctd.ai/
+- type: TermsOfService
+  url: https://ctd.ai/terms-of-use
+- type: PrivacyPolicy
+  url: https://ctd.ai/privacy-policy
 - type: Website
   url: https://ctd.ai
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

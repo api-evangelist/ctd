@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+probe: true
+source: https://ctd.ai/security
+url: https://ctd.ai/security
+certifications:
+- name: SOC 2 Type II
+  detail: Independently audited annually; covers security, availability, and confidentiality.
+- name: GDPR
+  detail: Compliant for EU users — access, correction, deletion, and data portability rights.
+- name: CCPA
+  detail: Compliant for California residents with equivalent data rights.
+encryption:
+  in_transit: TLS 1.2+
+  at_rest: AES-256 (contacts, relationship scores, integrated data)
+access_control:
+- OAuth-only authentication (no password storage)
+- Email metadata only; email bodies not read by default
+- Role-based access controls (team/business plans)
+- SSO / SCIM (Business tier)
+practices:
+- Data never sold or shared with third parties
+- Full data portability and deletion
+- Regular vulnerability assessments and penetration testing
+- Network segmentation and access logging
+trust_center_url: null
+guide: https://ctd.ai/guide/category/security-privacy
+evidence:
+- source: https://ctd.ai/security
+  keywords:
+  - soc 2 type ii
+  - gdpr
+  - ccpa
+  - aes-256
+  - tls 1.2

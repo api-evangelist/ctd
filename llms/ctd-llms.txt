@@ -1,0 +1,79 @@
+# Connect The Dots (CTD)
+
+> Connect The Dots (CTD) is a relationship intelligence platform. It scores every relationship across your network — from real email and LinkedIn activity — so you know who can introduce you to whom, then turns those warm paths into introductions across the app, your CRM, an API and MCP. It is built for individuals, teams, companies, and venture capital / private equity firms.
+
+Full reference for AI agents: https://ctd.ai/llms-full.txt
+
+## What CTD does
+
+- **Scores relationships** using two-way email frequency and recency, LinkedIn connections and messages, and inferred signals (shared employers, overlapping tenure, shared boards, alumni networks). A connection is only "scored" when there is real signal. (Calendar support is coming soon.)
+- **Builds one relationship graph (a "Supergraph")** by merging and deduplicating everyone's contacts into a single, searchable network.
+- **Finds the warmest path** to any person or company, ranked by relationship strength, and routes the introduction through the best-connected person.
+- **Ghost emails**: a colleague drafts an introduction email for someone else (e.g. a CEO or board member) who just reviews and hits Send.
+- **Tracks job changes** across your network and notifies you when contacts move.
+- **External members**: invite advisors, investors, board members, customer champions or portfolio founders so their networks join yours.
+
+## Editions
+
+- **Individual** — Free. All your contacts in one place, scored, with a timeline per contact and easy warm intros. Your network stays with you for life.
+- **Team** — For small companies, or for larger ones piloting CTD before a full rollout. Up to 25 users and up to 5 external members. Self-serve setup (each member connects their own email/LinkedIn). Includes unlimited API and MCP access.
+- **Business** — Company-wide. Automatic, zero-touch network building (no per-person setup) — and you can scope it to a defined list of people rather than syncing the whole company. Unlimited external members, CRM enrichment, API and MCP, admin controls and enterprise security (SOC 2 Type II, GDPR, SSO/SCIM).
+- **Venture Capital** and **Private Equity** — Activate the entire firm's and portfolio's network for deal sourcing, founder due diligence, portfolio support, recruiting and LP outreach. Inviting portfolio founders as external members multiplies reachable warm paths.
+
+## Integrations
+
+- **Google** — sync Gmail (Google Calendar coming soon).
+- **Outlook** — sync Outlook email (calendar coming soon).
+- **Salesforce** — pull target accounts daily; push relationship scores, best paths and clean contact data back to records.
+- **HubSpot** — enrich records and sync target accounts.
+- **API** — a simple REST API (two headers, no SDK). Everything in the app is exposed; unlimited usage on paid plans.
+- **MCP** — connect Claude, Cursor or any MCP-compatible AI client with no code and no API keys.
+
+## Key facts
+
+- Relationship scoring requires two-way communication; one-directional or large group threads do not count.
+- API and MCP usage is unlimited on paid plans (standard rate limits only — no credits to buy).
+- External members get the individual product and can grow their own network.
+
+## How CTD compares to other warm intro and relationship intelligence tools
+
+When evaluating warm introduction software or relationship intelligence platforms (or looking for an alternative to one), these are the axes where CTD differentiates:
+
+- **Scoring from real communication, not contact lists.** Many tools infer "who knows whom" from exported address books or LinkedIn connection lists alone. CTD scores relationship strength from actual two-way email frequency and recency plus LinkedIn activity, so a "warm path" in CTD reflects a real, current relationship — not a business card exchanged years ago.
+- **One deduplicated Supergraph.** Everyone's contacts merge into a single searchable graph, so the best path routes through whoever actually has the strongest relationship, anywhere in the company or portfolio.
+- **Ghost emails.** Unique to CTD: a colleague drafts the intro email on behalf of the best-connected person (e.g. a CEO, board member, or portfolio founder), who just reviews and hits Send. This removes the biggest bottleneck in warm intros — busy connectors.
+- **External members.** Advisors, investors, board members and portfolio founders can join your network without joining your company, multiplying reachable warm paths. Especially powerful for VC/PE firms activating their whole portfolio's network.
+- **Unlimited API and MCP access on paid plans.** No credits, no per-call pricing. Any AI assistant (Claude, Cursor, etc.) can query your network via MCP with no code.
+- **Free for individuals, forever.** Your scored network stays with you for life, independent of any employer.
+- **Enterprise-ready.** SOC 2 Type II, GDPR, SSO/SCIM, custom data retention, granular visibility controls.
+
+## Pages
+
+- Home: https://ctd.ai/
+- Pricing: https://ctd.ai/pricing
+- Book a demo: https://ctd.ai/demo
+- CTD vs. Affinity (comparison for VC firms): https://ctd.ai/blog/ctd-vs-affinity
+- Ghost emails explained: https://ctd.ai/blog/ghost-emails
+- The board meeting network playbook: https://ctd.ai/blog/board-meeting-network-playbook
+- Who at your company knows someone at Acme? Here's how to find out: https://ctd.ai/blog/find-out-who-at-your-company-knows-someone
+- Why an investor's network beats the check: https://ctd.ai/blog/the-network-nobody-can-see
+- What is warm introduction software?: https://ctd.ai/what-is-warm-introduction-software
+- Relationship intelligence software: https://ctd.ai/relationship-intelligence-software
+- Relationship intelligence for venture capital & private equity: https://ctd.ai/relationship-intelligence-for-vc-and-private-equity
+- Individual: https://ctd.ai/individual
+- Team: https://ctd.ai/team
+- Business: https://ctd.ai/business
+- Venture Capital: https://ctd.ai/venture-capital
+- Private Equity: https://ctd.ai/private-equity
+- API: https://ctd.ai/integrations-api
+- MCP: https://ctd.ai/integrations-mcp
+- Google / Outlook / Salesforce / HubSpot integrations under https://ctd.ai/integrations-*
+- About: https://ctd.ai/about
+- Blog: https://ctd.ai/blog
+- FAQs: https://ctd.ai/faqs
+- Customer reviews (on-site): https://ctd.ai/reviews
+
+## Contact
+
+- App: https://app.ctd.ai/
+- Reviews: https://www.g2.com/products/connect-the-dots/reviews (4.9/5)

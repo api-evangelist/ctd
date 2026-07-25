@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of ctd.ai and app.ctd.ai .well-known paths
+entries:
+- path: /.well-known/oauth-authorization-server
+  host: app.ctd.ai
+  url: https://app.ctd.ai/users-api/.well-known/oauth-authorization-server
+  status: 200
+  type: oauth-authorization-server
+  standard: RFC 8414
+  file: ctd-oauth-authorization-server.json
+- path: /.well-known/oauth-protected-resource
+  host: app.ctd.ai
+  url: https://app.ctd.ai/.well-known/oauth-protected-resource
+  status: 200
+  type: oauth-protected-resource
+  standard: RFC 9728
+  file: ctd-oauth-protected-resource.json
+- path: /.well-known/security.txt
+  host: ctd.ai
+  status: 404
+- path: /.well-known/openid-configuration
+  host: ctd.ai
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  host: ctd.ai
+  status: 404
+- path: /.well-known/api-catalog
+  host: ctd.ai
+  status: 404
+- path: /.well-known/ai-plugin.json
+  host: ctd.ai
+  status: 404
+notes: >-
+  The two 200 responses are the OAuth metadata backing the CTD MCP server
+  (app.ctd.ai/mcp). The bare app.ctd.ai/.well-known/oauth-authorization-server
+  path returns the SPA shell (HTML), not JSON; the real RFC 8414 document is
+  served under the users-api issuer path recorded above.

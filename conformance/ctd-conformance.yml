@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: OAuth well-known metadata (app.ctd.ai) + https://ctd.ai/security
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    RFC 8414 authorization-server metadata published at
+    https://app.ctd.ai/users-api/.well-known/oauth-authorization-server;
+    authorization_code and refresh_token grants supported.
+- id: pkce
+  conforms: true
+  evidence: code_challenge_methods_supported = [S256] in the AS metadata.
+- id: rfc8414
+  conforms: true
+  evidence: OAuth 2.0 Authorization Server Metadata document served for the users-api issuer.
+- id: rfc9728
+  conforms: true
+  evidence: >-
+    OAuth 2.0 Protected Resource Metadata at
+    https://app.ctd.ai/.well-known/oauth-protected-resource (resource app.ctd.ai/mcp).
+- id: rfc7591
+  conforms: true
+  evidence: Dynamic client registration endpoint present in AS metadata (registration_endpoint).
+- id: scim
+  conforms: true
+  evidence: SSO/SCIM provisioning documented for the Business tier (https://ctd.ai/security).
+- id: soc2
+  conforms: true
+  evidence: SOC 2 Type II, independently audited annually (https://ctd.ai/security).
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliance with access/correction/deletion/portability rights (https://ctd.ai/security).
+- id: ccpa
+  conforms: true
+  evidence: CCPA compliance for California residents (https://ctd.ai/security).
+- id: oidc
+  conforms: false
+  evidence: No openid-configuration; the OAuth server advertises no openid scope or id_token.

@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: derived
+source: https://ctd.ai/integrations-api + https://ctd.ai/security
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://api.ctd.ai/user/atc-paths-api/public/v1/
+deprecation_policy: not published
+sunset_headers: not observed
+status_page: not found
+sla: not published
+data_retention: Custom data retention available (Business tier) per https://ctd.ai/security
+notes: >-
+  API surfaces a single public v1 under the atc-paths-api path. No dated changelog,
+  status page, or formal deprecation/Sunset (RFC 8594) policy was found on the public
+  site as of the generated date.
