@@ -1,7 +1,8 @@
 generated: '2026-07-18'
 method: searched
 source: https://ctd.ai/integrations-mcp + https://app.ctd.ai/.well-known/oauth-protected-resource
-status: available
+status: published
+status_raw: available
 name: Connect The Dots
 description: >-
   Official hosted/remote MCP server for Connect The Dots. Lets any MCP-compatible
