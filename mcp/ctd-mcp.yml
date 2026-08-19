@@ -4,11 +4,9 @@ source: https://ctd.ai/integrations-mcp + https://app.ctd.ai/.well-known/oauth-p
 status: published
 status_raw: available
 name: Connect The Dots
-description: >-
-  Official hosted/remote MCP server for Connect The Dots. Lets any MCP-compatible
-  AI client (Claude, Cursor) query your relationship graph — find warm paths to a
-  person or company, identify decision-makers, and track job changes — with no code
-  and no API keys.
+description: Official hosted/remote MCP server for Connect The Dots. Lets any MCP-compatible AI client
+  (Claude, Cursor) query your relationship graph — find warm paths to a person or company, identify decision-makers,
+  and track job changes — with no code and no API keys.
 server_url: https://app.ctd.ai/mcp
 hosting: remote
 transport: http
@@ -24,8 +22,6 @@ auth:
   - read
   - write
 capabilities:
-# Documented usage examples from the MCP page (not verbatim tool names —
-# CTD does not publish an explicit tool manifest).
 - Find contacts at a specific company with warm relationship paths
 - Identify decision-makers by role and location
 - Track job changes among your network contacts
@@ -36,9 +32,16 @@ install:
   - Cursor
   - Other MCP-compatible clients
   claude_connector_url: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Connect+The+Dots&connectorUrl=https%3A%2F%2Fapp.ctd.ai%2Fmcp%2F
-  notes: >-
-    An org admin first enables the connector in organization settings, then each
-    user connects it from Claude Customize > Connectors and approves the OAuth
-    authorization. No manual API keys.
+  notes: An org admin first enables the connector in organization settings, then each user connects it
+    from Claude Customize > Connectors and approves the OAuth authorization. No manual API keys.
 access: Unlimited MCP access on paid plans (Professional basic; Team/Business full).
 docs: https://ctd.ai/integrations-mcp
+deployment:
+  mode: none
+  endpoint: https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Connect+The+Dots&connectorUrl=https%3A%2F%2Fapp.ctd.ai%2Fmcp%2F
+  verified: probed
+  probe: dead
+  note: the endpoint this manifest claimed did not answer; recorded as none rather than deleted so the
+    claim stays auditable
+  checked: '2026-08-12'
+  source: catalog MCP census
