@@ -1,0 +1,32 @@
+# Front Door AI Index — ctd — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: ctd
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: ctd.ai
+  final_host: ctd.ai
+  ownership: own
+  owner: ctd
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 22
+  host_score: 22
+  density: 6.66
+  words: 3301
+  tiers:
+    agentic: 9
+    core: 5
+    model: 8
+  ambiguous: 8
+  top_terms:
+    Claude: 8
+    MCP: 8
+    AI: 5
+    automation: 4
+    agent: 2
+    AI agent: 1
+    intelligence: 1
+    smart: 1
